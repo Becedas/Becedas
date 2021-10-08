@@ -1,0 +1,6 @@
+{
+  "appId": "com.becedas.myhome",
+  "appName": "MyHome",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

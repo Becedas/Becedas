@@ -1,0 +1,46 @@
+ <ion-reorder-group *ngIf="!reorderList" (ionItemReorder)="reorderItems($event)" disabled="false">
+      <ion-reorder *ngFor="let entry of data" >
+        <ion-item >
+          <ion-avatar slot="start">
+            <img src="{{entry.image}}">
+          </ion-avatar>
+          <ion-label>{{entry.val}}</ion-label>
+            <!--<ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>-->
+            <ion-avatar slot="end">
+              <img src="{{entry.market}}">
+            </ion-avatar>
+        </ion-item>
+      </ion-reorder>
+
+    </ion-reorder-group>
+
+
+    //--- INFINITE SCROLL
+
+  <!--<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)" [disabled]="numTimesLeft <= 0" >
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>-->
+
+  //--SEARCHBAR
+
+  <ion-searchbar showCancelButton="focus" placeholder="Buscar" mode="ios" animated (ionChange)="getItems($event)"></ion-searchbar>
+    <ion-list *ngIf="isItemAvailable; else reorderList" >
+      <ion-item-sliding *ngFor="let item of items">
+      <ion-item>
+          <ion-avatar slot="start">
+            <img src="{{item.image}}">
+          </ion-avatar>
+          <ion-label>{{item.val}}</ion-label>
+          <ion-item-options side="end">
+            <ion-item-option color="light">
+              <ion-button color="light" expand="full" (click)="addItems(item)">
+                <ion-icon name="bag-add-outline"></ion-icon>
+              </ion-button>
+            </ion-item-option>
+          </ion-item-options>  
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
