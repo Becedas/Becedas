@@ -1,7 +1,0 @@
-{
-  "name": "MyHome_App",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
