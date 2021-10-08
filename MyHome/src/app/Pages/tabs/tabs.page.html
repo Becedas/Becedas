@@ -1,21 +1,56 @@
 <ion-tabs>
+    
+        
+  <ion-fab vertical="bottom" horizontal="center" translucent="true">
+    <ion-fab-button >
+      <ion-icon name="logo-mastodon"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button  href="/tabs/tab-cart">
+        <ion-icon name="documents-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button  href="/tabs/tab-cart">
+        <ion-icon name="card-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button  href="/tabs/tab-cart">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 
-  <ion-tab-bar slot="bottom">
+  
+  <ion-tab-bar slot="bottom" >
+      
+      <ion-tab-button tab="" class="left-out">
+        
+      </ion-tab-button>
 
-    <ion-tab-button tab="cart">
-      <ion-icon name="cart-outline"></ion-icon>
-      <ion-label>Carrito</ion-label>
-    </ion-tab-button>
+      <ion-tab-button tab="tab-home" >
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
 
-    <ion-tab-button tab="home">
-      <ion-icon name="home"></ion-icon>
-      <ion-label>Home</ion-label>
-    </ion-tab-button>
+      <ion-tab-button tab="" class="right-out">
+        
+      </ion-tab-button>
+    
+      <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="red" fill-rule="evenodd"></path>
+      </svg>
 
-    <ion-tab-button tab="board">
-      <ion-icon name="clipboard-outline"></ion-icon>
-      <ion-label>Tablón</ion-label>
-    </ion-tab-button>
+      <ion-tab-button tab="" class="left-out">
+        
+      </ion-tab-button>
+    
+        <ion-tab-button tab="tab-board">
+          <ion-icon name="notifications-outline"></ion-icon>
+          <ion-label>Mail</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="" class="right-out">
+         
+        </ion-tab-button>
+    
   </ion-tab-bar>
-
+<!-- <app-my-tab-bar></app-my-tab-bar> -->
 </ion-tabs>
