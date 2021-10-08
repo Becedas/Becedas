@@ -1,0 +1,63 @@
+
+$navbar-height: 100px;
+$circle-radius: 80px;
+$backgroundColor: rgb(253, 192, 223);
+
+.tab-btn-ride {
+  width: 4rem !important;
+  height: 5rem;
+  border-radius: 50% 50%;
+  box-shadow: 0 0 0 1.5pt #ff9823;
+  margin-bottom: 2rem;
+  max-width: 5rem;
+  z-index: 10;
+  border: 3px solid white;
+}
+
+.main-container{
+    position: relative;
+    height: $navbar-height;
+    min-width: 400px;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     border-style: inherit;
+    border-color: inherit;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 0 10px 20px #4c8dff;
+}
+
+.circle-fab-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100px - #{$circle-radius } / 2);
+  margin-bottom: 0;
+  height: calc(#{$circle-radius} );
+  width: calc(#{$circle-radius} );
+  border-radius: calc(#{$circle-radius + 20} / 2);
+  border-color:  0 10px 20px #4c8dff;
+  box-shadow: 0 10px 20px #4c8dff;
+  background-color: #ffffff;
+}
+
+.circle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-bottom: 0;
+
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    z-index: 9;
+    
+    transition: height 0.3s;
+  }

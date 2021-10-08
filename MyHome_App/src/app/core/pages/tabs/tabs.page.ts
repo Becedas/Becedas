@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-tabs',
@@ -7,9 +8,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsPage implements OnInit {
 
-  constructor() { }
+  nativepath: string;
+  applicationDirectory='';
+  applicationStorageDirectory='';
+  dataDirectory='';
+  cacheDirectory='';
+  externalApplicationStorageDirectory='';
+  externalDataDirectory='';
+  externalCacheDirectory='';
+  externalRootDirectory='';
+  tempDirectory='';
+  getFreeDiskSpace:any=''; 
 
-  ngOnInit() {
+  constructor(private fileCtrl: File) {
+    //this.goToDir();
+   }
+
+   ngOnInit() {
   }
+
+  public goToDir()
+  {
+    this.applicationDirectory=this.fileCtrl.applicationDirectory;
+    this.applicationStorageDirectory=this.fileCtrl.applicationStorageDirectory;
+    this.dataDirectory=this.fileCtrl.dataDirectory;
+    this.cacheDirectory=this.fileCtrl.cacheDirectory;
+    this.externalApplicationStorageDirectory=this.fileCtrl.externalApplicationStorageDirectory;
+    this.externalDataDirectory=this.fileCtrl.externalDataDirectory;
+    this.externalCacheDirectory=this.fileCtrl.externalCacheDirectory;
+    this.externalRootDirectory=this.fileCtrl.externalRootDirectory;
+    this.tempDirectory=this.fileCtrl.tempDirectory;
+    this.fileCtrl.getFreeDiskSpace().then(data=>{
+      this.getFreeDiskSpace=data;
+    })
+  }
+  
 
 }
